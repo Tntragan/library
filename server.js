@@ -5,9 +5,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 const URI = process.env.DB;
-const db = mongoose.connect(db);
+const db = mongoose.connect(URI);
 
 const apiRoutes = require('./routes/api.js');
 const fccTestingRoutes = require('./routes/fcctesting.js');
